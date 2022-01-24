@@ -1,7 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+
 class Vote extends Model {}
+
 
 Vote.init(
     {
@@ -12,7 +14,7 @@ Vote.init(
         },
         user_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            // allowNull: false,
             references: {
                 model: 'users',
                 key: 'id'
@@ -20,7 +22,7 @@ Vote.init(
         },
         post_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            // allowNull: false,
             references: {
                 model: 'post',
                 key: 'id'
